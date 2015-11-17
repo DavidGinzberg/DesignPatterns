@@ -1,11 +1,19 @@
 
 class CustomPart implements Cloneable{
-  public CustomPart(){
+  
+  private int value;
+
+  public CustomPart(int x){
+    value = x;
     try{
       Thread.sleep(4000);
     }catch(InterruptedException e){
       System.out.println("Sleep interrupted");
     }
+  }
+
+  public getValue(){
+    return value;
   }
 
   public Object clone(){
